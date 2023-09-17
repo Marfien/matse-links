@@ -4,17 +4,22 @@ import Topic from "./components/topic/Topic.vue";
 import Card from "./components/topic/Card.vue";
 import SubTopic from "./components/topic/SubTopic.vue";
 import {ref} from "vue";
+import {toggleNavbar} from "./main.ts";
 import Burger from "./components/Burger.vue";
 
 let currentTopic = ref(0);
 
 function setTopic(event: {topic: number}) {
   currentTopic.value = event.topic;
+
+  if (window.outerWidth <= 1024) {
+    toggleNavbar();
+  }
 }
 </script>
 
 <template>
-  <div id="main">
+  <div id="app">
     <Burger/>
     <header id="header">
       <NavigationBar @settopic="setTopic"/>
@@ -105,20 +110,28 @@ function setTopic(event: {topic: number}) {
   flex-basis: calc(100vw / 3);
 }
 
-#main {
+main {
+  flex-grow: 1;
+}
+
+#app {
   display: flex;
   flex-direction: row;
 }
 
 @media (max-width: 1024px) {
-  #main {
-    flex-direction: column;
+  #app {
+    display: block;
   }
 
   #header {
-    flex-basis: 0;
+    height: 0;
     transition: ease-in 200ms;
     overflow-y: clip;
+  }
+
+  #header.open {
+    height: calc(100vh - 5rem);
   }
 }
 </style>

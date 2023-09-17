@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import NavigationBarItem from "./NavigationBarItem.vue";
+import Socials from "../icon/Socials.vue";
+import SocialIcon from "../icon/SocialIcon.vue";
 </script>
 
 <template>
@@ -8,11 +10,11 @@ import NavigationBarItem from "./NavigationBarItem.vue";
     <NavigationBarItem @settopic="$emit('settopic', $event)" topic-id="1" display="Mathematik"/>
     <NavigationBarItem @settopic="$emit('settopic', $event)" topic-id="2" display="Progammieren"/>
   </div>
-  <div id="social">
-    <img src="/src/assets/icon/github.svg" alt="GitHub">
-    <img src="/src/assets/icon/email.svg" alt="Email">
-    <img src="/src/assets/icon/discord.svg" alt="Discord">
-  </div>
+  <Socials>
+    <SocialIcon icon="GitHub" url="https://github.com/Marfien"/>
+    <SocialIcon icon="EMail" url="mailto:marvin.haase@rwth-aachen.de"/>
+    <SocialIcon icon="Discord" url="https://dicord.com/"/>
+  </Socials>
 </template>
 
 <style scoped>
@@ -27,25 +29,7 @@ import NavigationBarItem from "./NavigationBarItem.vue";
   z-index: 1;
 }
 
-#social {
+.socials {
   translate: 0 -100%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-#social > img {
-  width: 2rem;
-  filter: invert();
-  margin: 2rem;
-  opacity: .5;
-  transition: ease 500ms;
-}
-
-#social > img:hover {
-  opacity: 1;
-  transform: translateY(-.3rem);
-  box-shadow: red;
 }
 </style>

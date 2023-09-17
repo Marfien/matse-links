@@ -1,6 +1,7 @@
 <script setup lang="ts">
 
 import {onMounted} from "vue";
+import {toggleNavbar} from "../main.ts";
 
 onMounted(() => {
   for (let child of Array.from(document.getElementById("burgericon")!!.children as HTMLCollectionOf<HTMLElement>)) {
@@ -8,19 +9,6 @@ onMounted(() => {
   }
 })
 
-function toggleNavbar() {
-  let header = document.getElementById("header");
-  let icon = document.getElementById("burgericon")
-  let style = header?.style;
-
-  if (!style?.flexBasis) {
-    style?.setProperty("flex-basis", "calc(100vh - 5rem)");
-    icon?.classList.add("open")
-  } else {
-    style?.removeProperty("flex-basis");
-    icon?.classList.remove("open")
-  }
-}
 </script>
 
 <template>
