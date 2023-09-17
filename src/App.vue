@@ -106,12 +106,6 @@ function setTopic(event: {topic: number}) {
 }
 
 #main {
-  background-image: url("assets/layered-waves-haikei.svg");
-  background-repeat: no-repeat;
-  background-position-x: calc(100vw / 3);
-}
-
-#main {
   display: flex;
   flex-direction: row;
 }
