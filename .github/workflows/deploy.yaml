@@ -1,6 +1,8 @@
 name: 'Deploy website'
 
 on: [push]
+env:
+  NODE_ENV: production
 
 jobs:
   build:
