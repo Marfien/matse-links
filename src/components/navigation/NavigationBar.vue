@@ -11,9 +11,9 @@ import SocialIcon from "../icon/SocialIcon.vue";
     <NavigationBarItem @settopic="$emit('settopic', $event)" topic-id="2" display="Progammieren"/>
   </div>
   <Socials>
-    <SocialIcon icon="GitHub" url="https://github.com/Marfien"/>
+    <SocialIcon icon="GitHub" description="My GitHub profile" url="https://github.com/Marfien"/>
     <SocialIcon icon="EMail" url="mailto:marvin.haase@rwth-aachen.de"/>
-    <SocialIcon icon="Discord" url="https://dicord.com/"/>
+    <SocialIcon icon="Discord" url="https://discord.com/users/marfien"/>
   </Socials>
 </template>
 
@@ -31,5 +31,28 @@ import SocialIcon from "../icon/SocialIcon.vue";
 
 .socials {
   translate: 0 -100%;
+  transition: translate ease 200ms;
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    translate: 0 -5rem;
+  }
+
+  .socials {
+    translate: 0 calc(-100% - 5rem);
+  }
+}
+
+@media (max-height: 512px) {
+  .navbar {
+    gap: 0;
+  }
+}
+
+@media (max-height: 320px) {
+  .socials {
+    translate: 0 0;
+  }
 }
 </style>

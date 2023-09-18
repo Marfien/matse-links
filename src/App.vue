@@ -131,7 +131,7 @@ main {
   }
 
   #header.open {
-    height: calc(100vh - 5rem);
+    height: 100vh;
   }
 }
 </style>

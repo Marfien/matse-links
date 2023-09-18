@@ -13,7 +13,7 @@ defineEmits(['settopic'])
 
 <style scoped>
 .navbaritem, .navbaritem:after {
-  transition: ease .5s;
+  transition: ease 200ms;
 }
 
 .navbaritem {
@@ -42,5 +42,11 @@ defineEmits(['settopic'])
 .navbaritem:hover:after {
   margin-left: 0;
   width: 100%;
+}
+
+@media (max-height: 512px) {
+  .navbaritem {
+    margin-block: .5em;
+  }
 }
 </style>

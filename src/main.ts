@@ -5,7 +5,6 @@ import App from './App.vue'
 createApp(App)
     .mount('#index')
 
-
 export function toggleNavbar() {
     let header = document.getElementById("header");
     let icon = document.getElementById("burgericon")!!;
