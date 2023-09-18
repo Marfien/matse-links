@@ -30,7 +30,7 @@ defineProps({
 <style scoped>
 .topic {
   background-color: var(--topic-background-color);
-  background-image: url("src/assets/waves/navbar-dark.svg");
+  background-image: url("/src/assets/waves/navbar-dark.svg");
   background-repeat: no-repeat;
   background-size: auto 101%;
   background-position-y: center;
@@ -49,7 +49,7 @@ defineProps({
 
 @media (prefers-color-scheme: light) {
   .topic {
-    background-image: url("src/assets/waves/navbar-light.svg");
+    background-image: url("/src/assets/waves/navbar-light.svg");
   }
 }
 
