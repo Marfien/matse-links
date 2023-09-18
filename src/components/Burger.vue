@@ -38,7 +38,7 @@ onMounted(() => {
   position: absolute;
   height: calc(1rem / 6);
   width: 100%;
-  background: var(--color);
+  background: var(--navbar-text-color);
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -82,6 +82,7 @@ onMounted(() => {
 #burger > p {
   text-align: center;
   transition: ease-in-out 200ms;
+  color: var(--navbar-text-color);
 }
 
 #burger {

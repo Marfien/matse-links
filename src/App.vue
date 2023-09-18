@@ -111,7 +111,7 @@ function setTopic(event: {topic: number}) {
 }
 
 main {
-  flex-grow: 1;
+  max-width: calc(200vw / 3);
 }
 
 #app {
@@ -132,6 +132,10 @@ main {
 
   #header.open {
     height: 100vh;
+  }
+
+  main {
+    max-width: 100%;
   }
 }
 </style>

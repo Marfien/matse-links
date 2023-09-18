@@ -37,6 +37,7 @@ defineProps({
   opacity: 0;
   transition: ease 200ms;
   margin-top: 0;
+  color: var(--navbar-text-color);
 }
 
 .social-item > a:hover > img {

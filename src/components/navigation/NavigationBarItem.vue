@@ -22,6 +22,7 @@ defineEmits(['settopic'])
   cursor: pointer;
   min-width: 75%;
   max-width: 100%;
+  color: var(--navbar-text-color);
 }
 
 .navbaritem:hover {

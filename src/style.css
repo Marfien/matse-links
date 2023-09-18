@@ -7,8 +7,10 @@
   --color: rgba(255, 255, 255, 0.87);
   --card-border-color: rgba(255, 255, 255, 0.75);
   --card-glow-color: rgba(255, 255, 255, 0.1);
-  --background-color: #242424;
-  --topic-background-color: #213547;
+  --background-color: #001122;
+  --navbar-text-color: rgba(255, 255, 255, 0.87);
+  --topic-background-color: #002233;
+  --accent-color: #fcaf3c;
   background-color: var(--background-color);
   color: var(--color);
 
@@ -52,15 +54,9 @@ h1 {
 @media (prefers-color-scheme: light) {
   :root {
     --color: rgba(33, 53, 71, 0.87);
-    --card-border-color: rgba(255, 255, 255, 0.75);
+    --card-border-color: rgba(33, 53, 71, 0.75);
     --card-glow-color: rgba(255, 255, 255, 0.1);
-    --topic-background-color: #213547;
-    --background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+    --topic-background-color: #fffaf0;
+    --background-color: #002233;
   }
 }
