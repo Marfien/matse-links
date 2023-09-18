@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 defineProps({
   url: String,
   icon: String,
@@ -9,7 +10,7 @@ defineProps({
 <template>
   <div class="social-item">
     <a :href="url" target="_blank">
-      <img :src="`<%= BASE_URL %>/assets/icon/${ icon }.svg`" :alt="icon">
+      <img :src="`./assets/icon/${icon}.svg`" :alt="icon">
     </a>
     <p>{{ icon }}</p>
   </div>
@@ -21,6 +22,7 @@ defineProps({
   flex-direction: column;
   width: 6rem;
 }
+
 .social-item img {
   width: 2rem;
   height: 2rem;
