@@ -3,13 +3,13 @@ defineProps({
   url: String,
   icon: String,
   description: String
-})
+});
 </script>
 
 <template>
   <div class="social-item">
-    <a :href="url" target="_blank">
-      <img :src="require(`@/assets/icon/${ icon }.svg`)" :alt="icon">
+    <a :href="`<%= BASE_URL %>/assets/icon/${ icon }.svg`" target="_blank">
+      <img :src="url" :alt="icon">
     </a>
     <p>{{ icon }}</p>
   </div>
