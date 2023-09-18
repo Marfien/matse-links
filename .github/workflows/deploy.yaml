@@ -26,4 +26,4 @@ jobs:
       - name: Deploy to GitHub-Pages
         run: |
           git add dist && git commit -m 'adding dist subtree'
-          git subtree push --prefix dist origin gh-pages
+          git subtree push -f --prefix dist origin gh-pages
