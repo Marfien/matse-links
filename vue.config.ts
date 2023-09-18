@@ -1,6 +1,8 @@
 import * as process from "process";
+import {defineConfig} from "vite";
 
-console.log(JSON.stringify(process.env))
-module.exports = {
-    publicPath: process.env.NODE_ENV === "production" ? "/matse-links/" : "/",
-};
+module.exports = defineConfig({
+    publicPath: process.env.NODE_ENV === 'production'
+        ? '/matse-links/'
+        : '/'
+});
