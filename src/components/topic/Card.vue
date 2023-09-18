@@ -27,8 +27,8 @@ document.addEventListener("mousemove", e => {
 
 <style scoped>
 .card {
-  --mouse-x: 0;
-  --mouse-y: 0;
+  --mouse-x: -600px;
+  --mouse-y: -600px;
   background: radial-gradient(
       600px circle at var(--mouse-x) var(--mouse-y),
       var(--card-glow-color),
