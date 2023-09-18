@@ -13,7 +13,7 @@ import SocialIcon from "../icon/SocialIcon.vue";
   <Socials>
     <SocialIcon icon="GitHub" description="My GitHub profile" url="https://github.com/Marfien"/>
     <SocialIcon icon="Email" url="mailto:marvin.haase@rwth-aachen.de"/>
-    <SocialIcon icon="Discord" url="https://discord.com/users/marfien"/>
+    <SocialIcon icon="Discord" url="https://discord.com/users/406796740939743242"/>
   </Socials>
 </template>
 
