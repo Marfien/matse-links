@@ -8,8 +8,8 @@ defineProps({
 
 <template>
   <div class="social-item">
-    <a :href="`<%= BASE_URL %>/assets/icon/${ icon }.svg`" target="_blank">
-      <img :src="url" :alt="icon">
+    <a :href="url" target="_blank">
+      <img :src="`<%= BASE_URL %>/assets/icon/${ icon }.svg`" :alt="icon">
     </a>
     <p>{{ icon }}</p>
   </div>
