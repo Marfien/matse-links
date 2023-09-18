@@ -27,5 +27,5 @@ jobs:
           git config --global user.email "deploybot@matse.de"
       - name: Deploy to GitHub-Pages
         run: |
-          git add dist && git commit -m 'adding dist subtree'
+          git add dist && git commit -m '${{ toJSON(github.event.commits) }}'
           git push origin `git subtree split --prefix dist main`:gh-pages --force
