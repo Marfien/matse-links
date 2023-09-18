@@ -19,7 +19,9 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
-      - name: Add to subtree
-        run: git add dist && git commit -m 'adding dist subtree'
+      - name: Setup git
+        run: git config --global user.name "Deploy Bot"
       - name: Deploy to GitHub-Pages
-        run: git subtree push --prefix dist origin gh-pages
+        run: |
+          git add dist && git commit -m 'adding dist subtree'
+          git subtree push --prefix dist origin gh-pages
