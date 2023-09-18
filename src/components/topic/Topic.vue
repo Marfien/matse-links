@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import {onMounted} from "vue";
-
 defineProps({
   name: String,
 })

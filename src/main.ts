@@ -6,7 +6,7 @@ createApp(App)
     .mount('#index')
 
 export function toggleNavbar() {
-    let header = document.getElementById("header");
+    let header = document.getElementById("header")!!;
     let icon = document.getElementById("burgericon")!!;
     let classList = header.classList;
 
