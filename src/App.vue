@@ -136,6 +136,12 @@ main {
 
   main {
     width: 100vw;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    position: absolute;
     height: 100%;
   }
 }
