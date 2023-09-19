@@ -39,13 +39,14 @@ defineProps({
   height: 100vh;
   padding-left: 50px;
   display: flex;
+  gap: 5rem;
   flex-direction: column;
   overflow-y: auto;
 }
 
+/* the gap property handles the rest */
 .topic::after {
   content: "";
-  min-height: 3rem;
 }
 
 @media (prefers-color-scheme: light) {

@@ -18,7 +18,6 @@ defineProps({
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 5rem;
   padding-inline: 1rem;
   translate: -.25rem 0;
 }
