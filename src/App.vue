@@ -111,7 +111,7 @@ function setTopic(event: {topic: number}) {
 }
 
 main {
-  max-width: calc(200vw / 3);
+  flex-basis: calc(200vw / 3);
 }
 
 #app {
@@ -135,7 +135,7 @@ main {
   }
 
   main {
-    max-width: 100%;
+    width: 100vw;
   }
 }
 </style>

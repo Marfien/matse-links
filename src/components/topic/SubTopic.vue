@@ -19,16 +19,17 @@ defineProps({
   align-items: center;
   flex-direction: column;
   padding-bottom: 5rem;
+  padding-inline: 1rem;
   translate: -.25rem 0;
 }
 
 .subtopic > div {
+  --gap-width: 1rem;
   display: grid;
-  width: calc(200vw / 3 - 6rem - 1px);
+  width: calc(100% - var(--gap-width));
   translate: -.5rem 0;
   grid-template-columns: 50% 50%;
-  gap: 1rem;
-  margin-inline: 1rem;
+  gap: var(--gap-width);
 }
 
 @media (max-width: 768px) {
@@ -45,6 +46,7 @@ defineProps({
 
   .subtopic {
     translate: 0 0;
+    padding-inline: 0;
   }
 }
 </style>

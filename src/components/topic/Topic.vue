@@ -32,7 +32,8 @@ defineProps({
   background-color: var(--topic-background-color);
   background-image: url("/src/assets/waves/navbar-dark.svg");
   background-repeat: no-repeat;
-  background-size: auto 101%;
+  background-size: auto calc(100% + 2px);
+  width: calc(100% - 50px);
   background-position-y: center;
   background-position-x: -20px;
   height: 100vh;
@@ -44,7 +45,7 @@ defineProps({
 
 .topic::after {
   content: "";
-  height: 3rem;
+  min-height: 3rem;
 }
 
 @media (prefers-color-scheme: light) {
@@ -57,6 +58,13 @@ defineProps({
   .topic {
     background-image: none;
     padding: 0;
+    width: 100%;
+  }
+}
+
+@media (max-height: 900px) {
+  .topic {
+    background-size: auto 900px;
   }
 }
 
