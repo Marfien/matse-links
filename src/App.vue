@@ -67,7 +67,9 @@ function setTopic(event: {topic: number}) {
           <Card display="Eclipse IDE" description="Simple, aber limitierte IDE zum Einstieg ins Programmieren"
                 url="https://www.eclipse.org/downloads/"/>
           <Card display="IntelliJ IDE" description="Komplexe und Umfangreiche IDE; der de facto Industriestandart"
-                url="https://www.jetbrains.com/de-de/idea/download/"/>
+                url="https://www.jetbrains.com/de-de/idea/"/>
+          <Card display="VS Code" description="Sehr flexible und schnelle IDE"
+                url="https://code.visualstudio.com"/>
           <Card display="GitHub Education Pack"
                 description="Viele kostenlose Produkte für Schüler u. Studenten. U.a. alle JetBrains Ultimate Lizenzen, Kurse und Cloud-Anbieter"
                 url="https://education.github.com/pack"/>
