@@ -11,7 +11,7 @@ import SocialIcon from "../icon/SocialIcon.vue";
     <NavigationBarItem @settopic="$emit('settopic', $event)" topic-id="2" display="Progammieren"/>
   </div>
   <Socials>
-    <SocialIcon icon="GitHub" description="My GitHub profile" url="https://github.com/Marfien"/>
+    <SocialIcon icon="GitHub" url="https://github.com/Marfien/matse-links"/>
     <SocialIcon icon="Email" url="mailto:marvin.haase@rwth-aachen.de"/>
     <SocialIcon icon="Discord" url="https://discord.com/users/406796740939743242"/>
   </Socials>
