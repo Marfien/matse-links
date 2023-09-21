@@ -25,7 +25,7 @@ function setTopic(event: { topic: number }) {
       <NavigationBar @settopic="setTopic"/>
     </header>
     <main>
-      <transition>
+      <transition mode="out-in">
         <Topic v-if="currentTopic == 1" name="Mathematik">
           <SubTopic display="Skripte">
             <Card display="1. Semester" url="https://www.ili.fh-aachen.de/goto_elearning_crs_988059.html"/>
@@ -138,10 +138,6 @@ main > * {
   transition: all 300ms ease;
 }
 
-.v-enter-active {
-  transition-delay: 250ms;
-}
-
 .v-enter-from {
   transform: translateY(-1rem);
   opacity: 0;
@@ -169,6 +165,19 @@ main > * {
 
   main {
     width: 100vw;
+    background-image: none;
+  }
+
+  /* transitions */
+  .v-enter-active,
+  .v-leave-active {
+    transition: none;
+  }
+
+  .v-enter-from,
+  .v-leave-to {
+    transform: none;
+    opacity: 1;
   }
 }
 </style>
