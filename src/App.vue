@@ -119,6 +119,7 @@ main {
   flex-basis: calc(200vw / 3);
   background-color: var(--topic-background-color);
   background-image: url("/src/assets/waves/navbar-dark.svg");
+  background-position-x: -1px;
   background-repeat: no-repeat;
   background-size: auto calc(100% + 2px);
   height: 100vh;

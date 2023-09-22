@@ -33,7 +33,7 @@ document.addEventListener("mousemove", e => {
       600px circle at var(--mouse-x) var(--mouse-y),
       var(--card-glow-color),
       transparent 40%
-  );;;
+  );
   border: 1px solid var(--card-border-color);
   border-radius: .5rem;
   text-align: center;
