@@ -133,9 +133,12 @@ main > * {
   flex-direction: row;
 }
 
-.v-enter-active,
+.v-enter-active {
+  transition: all 150ms ease-out;
+}
+
 .v-leave-active {
-  transition: all 300ms ease;
+  transition: all 200ms ease-out;
 }
 
 .v-enter-from {

@@ -10,7 +10,6 @@
   --background-color: #001122;
   --navbar-text-color: rgba(255, 255, 255, 0.87);
   --topic-background-color: #002233;
-  --accent-color: #fcaf3c;
   background-color: var(--background-color);
   color: var(--color);
 
