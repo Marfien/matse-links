@@ -21,6 +21,8 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
+      - name: Replace URl in Open Graph meta-tags
+        run: sed -i 's/{url}/https:\/\/${{ github.GITHUB_REPOSITORY_OWNER }}.github.io\/${{ github.event.repository.name }}' dist/*.html
       - name: Setup git
         run: |
           git config --global user.name "Deploy Bot"
