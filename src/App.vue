@@ -100,9 +100,17 @@ function setTopic(event: { topic: number }) {
             <Card display="Identity Management Selfservice (Idm)" description="Passwörter ändern und verwalten"
                   url="https://idm.rwth-aachen.de/selfservice/PersonalData"/>
           </SubTopic>
+          <SubTopic display="IHK">
+            <Card display="Anmeldung" description="Anmeldung beim Azubi-Portal der IHK" url="https://berufsausbildung-aachen-ihk.de/tibrosBB/BB_auszubildende.jsp"/>
+          </SubTopic>
           <SubTopic display="MATSE">
             <Card display="Wiki" url="https://www.matse.itc.rwth-aachen.de/dienste/public/index.php?m=wiki"/>
+            <Card display="Dienste" url="https://www.matse.itc.rwth-aachen.de/dienste/protected/index.php"/>
             <Card display="Stundenplan" url="https://www.matse.itc.rwth-aachen.de/stundenplan/web/index.html"/>
+          </SubTopic>
+          <SubTopic display="Sonstiges">
+            <Card display="Paddel" description="Spicker, Lösungen und andere Materialien rund um MATSE" url="https://paddel.xyz"/>
+            <Card display="Tamiras Proton" description="Mitschriften aus dem Unterricht" url="https://drive.proton.me/urls/64WET4A3X0#zKl6OWbuL3Rq"/>
           </SubTopic>
         </Topic>
       </transition>
