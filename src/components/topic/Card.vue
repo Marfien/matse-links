@@ -3,7 +3,7 @@ defineProps({
   display: String,
   description: String,
   url: String
-})
+});
 
 document.addEventListener("mousemove", e => {
   for (let card of Array.from(document.getElementsByClassName("card") as HTMLCollectionOf<HTMLElement>)) {
@@ -15,7 +15,7 @@ document.addEventListener("mousemove", e => {
     style.setProperty("--mouse-x", `${x}px`);
     style.setProperty("--mouse-y", `${y}px`);
   }
-})
+});
 </script>
 
 <template>

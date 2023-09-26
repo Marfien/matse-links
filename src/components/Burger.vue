@@ -20,6 +20,7 @@ onMounted(() => {
     </div>
     <p>Menü</p>
   </div>
+  <div id="wave"/>
 </template>
 
 <style scoped>
@@ -96,9 +97,31 @@ onMounted(() => {
   background-color: var(--background-color);
 }
 
+#wave {
+  --background-offset: calc(-100vw * (30 / 1024));
+  display: none;
+  height: calc(86px + var(--background-offset));
+  width: 100%;
+  position: absolute;
+  background-image: var(--nav-bar-wave-rotated);
+  background-position-y: var(--background-offset);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  z-index: 1;
+}
+
 @media (max-width: 1024px) {
   #burger {
     display: flex;
+  }
+
+  #wave {
+    display: block;
+    transition: ease-in 200ms;
+  }
+
+  #wave.open {
+    bottom: calc(-30px + var(--background-offset));
   }
 }
 </style>

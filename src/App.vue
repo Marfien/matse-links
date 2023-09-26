@@ -118,7 +118,7 @@ function setTopic(event: { topic: number }) {
 main {
   flex-basis: calc(200vw / 3);
   background-color: var(--topic-background-color);
-  background-image: url("/src/assets/waves/navbar-dark.svg");
+  background-image: var(--nav-bar-wave);
   background-position-x: -1px;
   background-repeat: no-repeat;
   background-size: auto calc(100% + 2px);
@@ -169,7 +169,13 @@ main > * {
 
   main {
     width: 100vw;
+    height: calc(100vh - 5rem);
     background-image: none;
+  }
+
+  main > * {
+    padding-top: 56px;
+    padding-left: 0;
   }
 
   /* transitions */

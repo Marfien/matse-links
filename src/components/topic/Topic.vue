@@ -13,8 +13,6 @@ defineProps({
 <style scoped>
 .topic {
   width: calc(100% - 50px - 1rem);
-  background-position-y: center;
-  background-position-x: -20px;
   height: 100%;
   display: flex;
   gap: 5rem;
@@ -27,16 +25,8 @@ defineProps({
   content: "";
 }
 
-@media (prefers-color-scheme: light) {
-  .topic {
-    background-image: url("/src/assets/waves/navbar-light.svg");
-  }
-}
-
 @media (max-width: 1024px) {
   .topic {
-    background-image: none;
-    padding: 0;
     width: 100%;
   }
 

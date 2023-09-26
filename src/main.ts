@@ -8,13 +8,16 @@ createApp(App)
 export function toggleNavbar() {
     let header = document.getElementById("header")!!;
     let icon = document.getElementById("burgericon")!!;
+    let wave = document.getElementById("wave")!!;
     let classList = header.classList;
 
     if (!classList.contains("open")) {
         classList.add("open");
-        icon.classList.add("open")
+        icon.classList.add("open");
+        wave.classList.add("open");
     } else {
-        classList.remove("open")
-        icon.classList.remove("open")
+        classList.remove("open");
+        icon.classList.remove("open");
+        wave.classList.remove("open");
     }
 }

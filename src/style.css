@@ -10,6 +10,8 @@
   --background-color: #001122;
   --navbar-text-color: rgba(255, 255, 255, 0.87);
   --topic-background-color: #002233;
+  --nav-bar-wave: url("/src/assets/waves/navbar-dark.svg");
+  --nav-bar-wave-rotated: url("/src/assets/waves/navbar-dark-rotated.svg");
   background-color: var(--background-color);
   color: var(--color);
 
@@ -23,7 +25,7 @@
 html {
   margin: 0;
   padding: 0;
-  overflow: clip;
+  overflow: hidden;
 }
 
 a {
@@ -52,6 +54,8 @@ h1 {
 
 @media (prefers-color-scheme: light) {
   :root {
+    --nav-bar-wave: url("/src/assets/waves/navbar-light.svg");
+    --nav-bar-wave-rotated: url("/src/assets/waves/navbar-light-rotated.svg");
     --color: rgba(33, 53, 71, 0.87);
     --card-border-color: rgba(33, 53, 71, 0.75);
     --card-glow-color: rgba(255, 255, 255, 0.1);
