@@ -29,11 +29,6 @@ defineProps({
   .topic {
     width: 100%;
   }
-
-  .topic::after {
-    min-height: 2rem;
-    max-height: 2rem;
-  }
 }
 
 @media (max-height: 900px) {

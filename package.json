@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "shx cp index.html 404.html && vite && shx rm 404.html",
+    "dev": "shx cp index.html 404.html && vite --host && shx rm 404.html",
     "build": "vue-tsc && vite build && shx cp dist/index.html dist/404.html",
     "preview": "vite preview"
   },

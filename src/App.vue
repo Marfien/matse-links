@@ -130,7 +130,7 @@ main {
   background-position-x: -1px;
   background-repeat: no-repeat;
   background-size: auto calc(100% + 2px);
-  height: 100vh;
+  height: 100dvh;
 }
 
 main > * {
@@ -172,12 +172,12 @@ main > * {
   }
 
   #header.open {
-    height: 100vh;
+    height: 100dvh;
   }
 
   main {
     width: 100vw;
-    height: calc(100vh - 5rem);
+    height: calc(100dvh - 5rem);
     background-image: none;
   }
 

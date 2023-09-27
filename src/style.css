@@ -7,6 +7,7 @@
   --color: rgba(255, 255, 255, 0.87);
   --card-border-color: rgba(255, 255, 255, 0.75);
   --card-glow-color: rgba(255, 255, 255, 0.1);
+  /* Needs to be changed in index.html meta tags as well */
   --background-color: #001122;
   --navbar-text-color: rgba(255, 255, 255, 0.87);
   --topic-background-color: #002233;
@@ -25,7 +26,7 @@
 html {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow: clip;
 }
 
 a {
