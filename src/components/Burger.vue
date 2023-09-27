@@ -102,6 +102,7 @@ onMounted(() => {
   display: none;
   height: calc(86px + var(--background-offset));
   width: 101vw;
+  pointer-events: none;
   position: absolute;
   background-image: var(--nav-bar-wave-rotated);
   background-position-y: var(--background-offset);
