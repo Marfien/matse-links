@@ -3,7 +3,7 @@ import NavigationBar from "./components/navigation/NavigationBar.vue";
 import Topic from "./components/topic/Topic.vue";
 import Card from "./components/topic/Card.vue";
 import SubTopic from "./components/topic/SubTopic.vue";
-import {onMounted, ref} from "vue";
+import {ref} from "vue";
 import {toggleNavbar} from "./main.ts";
 import Burger from "./components/Burger.vue";
 
