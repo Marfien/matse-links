@@ -3,11 +3,27 @@ import NavigationBar from "./components/navigation/NavigationBar.vue";
 import Topic from "./components/topic/Topic.vue";
 import Card from "./components/topic/Card.vue";
 import SubTopic from "./components/topic/SubTopic.vue";
-import {ref} from "vue";
+import {onMounted, ref} from "vue";
 import {toggleNavbar} from "./main.ts";
 import Burger from "./components/Burger.vue";
 
-let currentTopic = ref(0);
+let currentTopic = ref(handleSectionSelection());
+
+function handleSectionSelection() {
+  let args = window.location.href.split("#");
+  if (args.length != 2) return 0;
+
+  let section = args[args.length - 1];
+  if (!section) return 0;
+  section = section.toLowerCase();
+
+  if (section == "mathe" || section == "math"|| section == "mathematik")
+    return 1;
+  if (section == "progamming"  || section == "programmieren")
+    return 2;
+
+  return 0;
+}
 
 function setTopic(event: { topic: number }) {
   currentTopic.value = event.topic;
@@ -65,7 +81,7 @@ function setTopic(event: { topic: number }) {
             <Card display="W3school Java" description="Java-Tutorials und gut zum Nachschlagen"
                   url="https://www.w3schools.com/java/default.asp"/>
           </SubTopic>
-          <SubTopic display="Sonstiges">
+          <SubTopic display="Software & Lizenzen">
             <Card display="Eclipse IDE" description="Simple, aber limitierte IDE zum Einstieg ins Programmieren"
                   url="https://www.eclipse.org/downloads/"/>
             <Card display="IntelliJ IDE" description="Komplexe und Umfangreiche IDE; der de facto Industriestandart"
@@ -75,6 +91,8 @@ function setTopic(event: { topic: number }) {
             <Card display="GitHub Education Pack"
                   description="Viele kostenlose Produkte für Schüler u. Studenten. U.a. alle JetBrains Ultimate Lizenzen, Kurse und Cloud-Anbieter"
                   url="https://education.github.com/pack"/>
+            <Card display="FH-Aachen GitLab" description="Git-Instance der FH; Code online sichern und zusammenarbeiten" url="https://git.fh-aachen.de"/>
+            <Card display="Azure Dev Tools" description="Azure-Cloud Credits und Zugriff auf viele weitere Produkte von Microsoft (außer Office-Produkte)" url="https://www.fh-aachen.de/fh-aachen/hochschulstruktur/zentrale-betriebseinheiten/dvz/anleitungen/microsoft-azure-dev-tools-for-teaching"/>
           </SubTopic>
         </Topic>
         <Topic v-else name="Allgemein">
@@ -90,6 +108,9 @@ function setTopic(event: { topic: number }) {
             <Card display="Exchange (Mail)" url="https://mail.fh-aachen.de/"/>
             <Card display="ILIAS" description="Material zu den Vorlesungen" url="https://ili.fh-aachen.de/"/>
             <Card display="QIS" description="Anmeldung und Einricht von Klausuren" url="https://qis.fh-aachen.de/"/>
+            <Card display="Campus Office" description="Planung und Verwaltung von verschiedenen Vorlesungs- und Veranstaltungsdaten" url="https://www.campusoffice.fh-aachen.de/"/>
+            <Card display="HISinOne STU" description="Zentrales Portal der FH-Aachen" url="https://h1.fh-aachen.de/"/>
+            <Card display="VPN" description="VPN-Dienst, um bspw. auf das QIS von Außerhalb der Uni zuzugreifen" url="https://vpn.fh-aachen.de"/>
             <Card display="Studiumsvorbereitung" description="Vorbereitende Aufgaben zum Studium"
                   url="https://www.fh-aachen.de/studium/informieren/studienvorbereitung"/>
           </SubTopic>
@@ -107,6 +128,9 @@ function setTopic(event: { topic: number }) {
             <Card display="Wiki" url="https://www.matse.itc.rwth-aachen.de/dienste/public/index.php?m=wiki"/>
             <Card display="Dienste" url="https://www.matse.itc.rwth-aachen.de/dienste/protected/index.php"/>
             <Card display="Stundenplan" url="https://www.matse.itc.rwth-aachen.de/stundenplan/web/index.html"/>
+          </SubTopic>
+          <SubTopic display="Software">
+            <Card display="MS Office 365" description="Excel, Word, PowerPoint, etc." url="https://www.fh-aachen.de/fh-aachen/hochschulstruktur/zentrale-betriebseinheiten/dvz/anleitungen/office-365"/>
           </SubTopic>
           <SubTopic display="Sonstiges">
             <Card display="Paddel" description="Spicker, Lösungen und andere Materialien rund um MATSE" url="https://paddel.xyz"/>

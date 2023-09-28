@@ -118,7 +118,6 @@ onMounted(() => {
 
   #wave {
     display: block;
-    transition: ease-in 200ms;
   }
 
   #wave.open {
