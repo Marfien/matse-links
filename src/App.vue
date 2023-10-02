@@ -123,6 +123,7 @@ function setTopic(event: { topic: number }) {
           </SubTopic>
           <SubTopic display="IHK">
             <Card display="Anmeldung" description="Anmeldung beim Azubi-Portal der IHK" url="https://berufsausbildung-aachen-ihk.de/tibrosBB/BB_auszubildende.jsp"/>
+            <Card display="Ausbildungsnachweise" description="Einreichen der Ausbildungsnachweise" url="https://berufsausbildung-aachen-ihk.de/tibrosBB/azubiHeft.jsp"/>
           </SubTopic>
           <SubTopic display="MATSE">
             <Card display="Wiki" url="https://www.matse.itc.rwth-aachen.de/dienste/public/index.php?m=wiki"/>
