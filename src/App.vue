@@ -3,11 +3,23 @@ import NavigationBar from "./components/navigation/NavigationBar.vue";
 import Topic from "./components/topic/Topic.vue";
 import Card from "./components/topic/Card.vue";
 import SubTopic from "./components/topic/SubTopic.vue";
-import {ref} from "vue";
+import {ref, watchEffect} from "vue";
 import {toggleNavbar} from "./main.ts";
 import Burger from "./components/Burger.vue";
 
 let currentTopic = ref(handleSectionSelection());
+
+watchEffect(() => {
+  let topicId = currentTopic.value;
+
+  if (topicId == 1) {
+    document.title = "MATSE-Links - Mathematik";
+  } else if (topicId == 2) {
+    document.title = "MATSE-Links - Progammieren";
+  } else {
+    document.title = "MATSE-Links - Allgemein";
+  }
+});
 
 function handleSectionSelection() {
   let args = window.location.href.split("#");
@@ -159,7 +171,7 @@ main {
 }
 
 main > * {
-  padding-left: calc(50px + 1rem);
+  padding-left: 8dvh;
 }
 
 #app {
@@ -207,7 +219,7 @@ main > * {
   }
 
   main > * {
-    padding-top: 56px;
+    padding-top: calc(1.5 * 100vw * (30 / 1024));
     padding-left: 0;
   }
 
