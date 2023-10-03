@@ -164,9 +164,9 @@ main {
   flex-basis: calc(200vw / 3);
   background-color: var(--topic-background-color);
   background-image: var(--nav-bar-wave);
-  background-position-x: -1px;
+  background-position: -2px -2px;
   background-repeat: no-repeat;
-  background-size: auto calc(100% + 2px);
+  background-size: auto calc(100% + 4px);
   height: 100dvh;
 }
 

@@ -12,7 +12,7 @@ defineProps({
 
 <style scoped>
 .topic {
-  width: calc(100% - 50px - 1rem);
+  width: calc(100% - 8dvh);
   height: 100%;
   display: flex;
   gap: 5rem;
