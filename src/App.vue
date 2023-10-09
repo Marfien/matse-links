@@ -71,8 +71,10 @@ function setTopic(event: { topic: number }) {
                   url="https://hm4mint.nrw/"/>
           </SubTopic>
           <SubTopic display="Sonstiges">
-            <Card display="Wolframalpha" description="Mathematische Formeln und Ausdrücke auswerten"
+            <Card display="Wolfram|Alpha" description="Mathematische Formeln und Ausdrücke auswerten"
                   url="https://www.wolframalpha.com/"/>
+            <Card display="Symbolab" description="Alternaive zu Wolfram|Alpha mit kostenlosen Lösungsweg"
+                  url="https://de.symbolab.com/"/>
           </SubTopic>
         </Topic>
         <Topic v-else-if="currentTopic == 2" name="Programmieren">
