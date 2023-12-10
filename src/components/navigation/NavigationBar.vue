@@ -8,7 +8,7 @@ import SocialIcon from "../icon/SocialIcon.vue";
   <div class="navbar">
     <NavigationBarItem @settopic="$emit('settopic', $event)" topic-id="0" display="Allgemein"/>
     <NavigationBarItem @settopic="$emit('settopic', $event)" topic-id="1" display="Mathematik"/>
-    <NavigationBarItem @settopic="$emit('settopic', $event)" topic-id="2" display="Progammieren"/>
+    <NavigationBarItem @settopic="$emit('settopic', $event)" topic-id="2" display="Informatik"/>
   </div>
   <Socials>
     <SocialIcon icon="GitHub" url="https://github.com/Marfien/matse-links"/>

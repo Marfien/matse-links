@@ -15,7 +15,7 @@ watchEffect(() => {
   if (topicId == 1) {
     document.title = "MATSE-Links - Mathematik";
   } else if (topicId == 2) {
-    document.title = "MATSE-Links - Progammieren";
+    document.title = "MATSE-Links - Informatik";
   } else {
     document.title = "MATSE-Links - Allgemein";
   }
@@ -55,8 +55,16 @@ function setTopic(event: { topic: number }) {
     <main>
       <transition mode="out-in">
         <Topic v-if="currentTopic == 1" name="Mathematik">
-          <SubTopic display="Skripte">
-            <Card display="1. Semester" url="https://www.ili.fh-aachen.de/goto_elearning_crs_988059.html"/>
+          <SubTopic display="Lineare Algebra 1">
+            <Card display="Skript" url="https://www.matse.itc.rwth-aachen.de/dienste/public/show_document.php?id=59770667"/>
+            <Card display="Ilias" url="https://www.ili.fh-aachen.de/goto_elearning_crs_1147283.html"/>
+            <Card display="Hausaufgaben-Abgabe" url="https://www.ili.fh-aachen.de/ilias.php?ref_id=1147294&target=1147294&cmd=showOverview&cmdClass=ilobjexercisegui&cmdNode=bw:o5&baseClass=ilexercisehandlergui"/>
+            <Card display="MATSE-Wiki-Seite" url="https://www.matse.itc.rwth-aachen.de/dienste/public/index.php?m=wiki&p=Lehrveranstaltungen/Pflichtmodule/Mathematik/Lineare_Algebra_I"/>
+          </SubTopic>
+          <SubTopic display="Analysis 1">
+            <Card display="Skript" url="https://www.ili.fh-aachen.de/goto_elearning_file_1165674_download.html"/>
+            <Card display="Ilias" url="https://www.ili.fh-aachen.de/goto_elearning_crs_1140827.html"/>
+            <Card display="Hausaufgaben-Abgabe" url="https://www.ili.fh-aachen.de/ilias.php?ref_id=1140950&target=1140950&cmd=showOverview&cmdClass=ilobjexercisegui&cmdNode=bw:o5&baseClass=ilexercisehandlergui"/>
           </SubTopic>
           <SubTopic display="Lernen">
             <Card display="Mathe by Daniel Jung"
@@ -64,8 +72,8 @@ function setTopic(event: { topic: number }) {
                   url="https://www.youtube.com/@MathebyDanielJung"/>
             <Card display="MathemaTrick" description="YouTube-Tutorials zu Mathe"
                   url="https://www.youtube.com/@MathemaTrick"/>
-            <Card display="Online Mathe Brückenkurs (OBM+)"
-                  description="Mathekenntnisse nach der Schule für die Uni auffrischen" url="https://ombplus.de/"/>
+            <Card display="Mathe Peter" description="YouTube-Tutorials zu Uni-Mathe (hauptsächlich Analysis)"
+                  url="https://www.youtube.com/@MathePeter"/>
             <Card display="Hohe Mathematik (NRW)"
                   description="Einführung und Übungen in die Höhere Mathematik vom Land NRW bereitgestellt"
                   url="https://hm4mint.nrw/"/>
@@ -77,9 +85,16 @@ function setTopic(event: { topic: number }) {
                   url="https://de.symbolab.com/"/>
           </SubTopic>
         </Topic>
-        <Topic v-else-if="currentTopic == 2" name="Programmieren">
-          <SubTopic display="Skripte">
-            <Card display="1. Semester" url="https://www.ili.fh-aachen.de/goto_elearning_crs_1136668.html#script"/>
+        <Topic v-else-if="currentTopic == 2" name="Informatik">
+          <SubTopic display="Progammieren mit Java">
+            <Card display="Skript" url="https://www.matse.itc.rwth-aachen.de/dienste/public/show_document.php?id=59770673"/>
+            <Card display="Ilias" url="https://www.ili.fh-aachen.de/goto_elearning_crs_1136668.html"/>
+            <Card display="Hausaufgaben-Abgabe" url="https://www.ili.fh-aachen.de/ilias.php?ref_id=1136687&target=1136687&cmd=showOverview&cmdClass=ilobjexercisegui&cmdNode=bw:o5&baseClass=ilexercisehandlergui"/>
+            <Card display="MATSE-Wiki-Seite" url="https://www.matse.itc.rwth-aachen.de/dienste/public/index.php?m=wiki&p=Lehrveranstaltungen/Pflichtmodule/Programmiersprachen/Programmierung_mit_Java"/>
+          </SubTopic>
+          <SubTopic display="IT-Grundlagen">
+            <Card display="Skript" url="https://www.ili.fh-aachen.de/goto_elearning_file_1162528_download.html"/>
+            <Card display="Ilias" url="https://www.ili.fh-aachen.de/goto_elearning_crs_1162518.html"/>
           </SubTopic>
           <SubTopic display="Lernen">
             <Card display="The Morpheus Tutorials"
@@ -115,34 +130,26 @@ function setTopic(event: { topic: number }) {
                   url="https://www.studierendenwerk-aachen.de/de/Gastronomie/mensa-academica-wochenplan.html"/>
             <Card display="Ahornstraße" description="Mensa um die Ecke vom ITC"
                   url="https://www.studierendenwerk-aachen.de/de/Gastronomie/mensa-ahornstrasse-wochenplan.html"/>
-            <Card display="China Mann" description="Günstiger Chinese in der Ponte"
-                  url="https://www.google.com/maps?sca_esv=565618840&client=safari&vet=12ahUKEwiO-LbhtayBAxXPPOwKHT-SAzIQ8UF6BAgFEG8..i&lei=ljMEZY7VKM_5sAe_pI6QAw&cs=1&um=1&ie=UTF-8&fb=1&gl=de&sa=X&geocode=KUeXh-B5mcBHMTW6BHi-c4dG&daddr=Malteserstraße+24,+52062+Aachen"/>
           </SubTopic>
-          <SubTopic display="FH">
-            <Card display="Exchange (Mail)" url="https://mail.fh-aachen.de/"/>
-            <Card display="ILIAS" description="Material zu den Vorlesungen" url="https://ili.fh-aachen.de/"/>
-            <Card display="QIS" description="Anmeldung und Einricht von Klausuren" url="https://qis.fh-aachen.de/"/>
-            <Card display="Campus Office" description="Planung und Verwaltung von verschiedenen Vorlesungs- und Veranstaltungsdaten" url="https://www.campusoffice.fh-aachen.de/"/>
-            <Card display="HISinOne STU" description="Zentrales Portal der FH-Aachen" url="https://h1.fh-aachen.de/"/>
-            <Card display="VPN" description="VPN-Dienst, um bspw. auf das QIS von Außerhalb der Uni zuzugreifen" url="https://vpn.fh-aachen.de"/>
-            <Card display="Studiumsvorbereitung" description="Vorbereitende Aufgaben zum Studium"
-                  url="https://www.fh-aachen.de/studium/informieren/studienvorbereitung"/>
-          </SubTopic>
-          <SubTopic display="RWTH">
-            <Card display="Exchange (Mail)" url="https://mail.rwth-aachen.de/"/>
-            <Card display="Hochschulsport" description="Anmeldung zu günstigem Sportangeboten"
-                  url="https://hochschulsport.rwth-aachen.de/cms/~icgi/HSZ/"/>
-            <Card display="Identity Management Selfservice (Idm)" description="Passwörter ändern und verwalten"
-                  url="https://idm.rwth-aachen.de/selfservice/PersonalData"/>
+          <SubTopic display="MATSE">
+            <Card display="Wiki" url="https://www.matse.itc.rwth-aachen.de/dienste/public/index.php?m=wiki"/>
+            <Card display="Stundenplan" url="https://www.matse.itc.rwth-aachen.de/stundenplan/web/index.html"/>
+            <Card display="Dienste" url="https://www.matse.itc.rwth-aachen.de/dienste/protected/index.php"/>
           </SubTopic>
           <SubTopic display="IHK">
             <Card display="Anmeldung" description="Anmeldung beim Azubi-Portal der IHK" url="https://berufsausbildung-aachen-ihk.de/tibrosBB/BB_auszubildende.jsp"/>
             <Card display="Ausbildungsnachweise" description="Einreichen der Ausbildungsnachweise" url="https://berufsausbildung-aachen-ihk.de/tibrosBB/azubiHeft.jsp"/>
           </SubTopic>
-          <SubTopic display="MATSE">
-            <Card display="Wiki" url="https://www.matse.itc.rwth-aachen.de/dienste/public/index.php?m=wiki"/>
-            <Card display="Dienste" url="https://www.matse.itc.rwth-aachen.de/dienste/protected/index.php"/>
-            <Card display="Stundenplan" url="https://www.matse.itc.rwth-aachen.de/stundenplan/web/index.html"/>
+          <SubTopic display="FH">
+            <Card display="ILIAS" description="Material zu den Vorlesungen" url="https://ili.fh-aachen.de/"/>
+            <Card display="QIS" description="Anmeldung und Einricht von Klausuren" url="https://qis.fh-aachen.de/"/>
+            <Card display="Exchange (Mail)" url="https://mail.fh-aachen.de/"/>
+            <Card display="VPN" description="VPN-Dienst, um bspw. auf das QIS von Außerhalb der Uni zuzugreifen" url="https://vpn.fh-aachen.de"/>
+          </SubTopic>
+          <SubTopic display="RWTH">
+            <Card display="Exchange (Mail)" url="https://mail.rwth-aachen.de/"/>
+            <Card display="Hochschulsport" description="Anmeldung zu günstigem Sportangeboten"
+                  url="https://hochschulsport.rwth-aachen.de/cms/~icgi/HSZ/"/>
           </SubTopic>
           <SubTopic display="Software">
             <Card display="MS Office 365" description="Excel, Word, PowerPoint, etc." url="https://www.fh-aachen.de/fh-aachen/hochschulstruktur/zentrale-betriebseinheiten/dvz/anleitungen/office-365"/>
