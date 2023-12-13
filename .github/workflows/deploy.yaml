@@ -27,6 +27,9 @@ jobs:
         run: |
           git config --global user.name "Deploy Bot"
           git config --global user.email "deploybot@matse.de"
+      - name: Add CNAME file
+        run: |
+          cp CNAME dist/CNAME
       - name: Deploy to GitHub-Pages
         run: |
           git add dist && git commit -m '${{ join(github.event.commits.*.message, '\n') }}'
